@@ -10,10 +10,22 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    mavenCentral()
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.56'
+
+    //protostuff
+    compile group: 'io.protostuff', name: 'protostuff-core', version: '1.6.0'
+    compile group: 'io.protostuff', name: 'protostuff-runtime', version: '1.6.0'
+
+
+    //swagger
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+
 }
